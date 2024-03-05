@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="shortcut icon"
+      href="logo-3.png"
+      type="image/x-icon"
+    />
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <!-- <img src="logo.png"> -->
+                    <h2>HEALTHY<span class="danger">SCORE</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <div class="sidebar"> 
+                <a href="index.html" class="active">
+                    <span class="material-symbols-outlined">health_metrics</span>
+                    <h3>Dashboard</h3>
+                </a>
+                
+                <a href="Add.html">
+                    <span class="material-symbols-outlined">blood_pressure</span>
+                    <h3>Add Values</h3>
+                </a>
+              
+                <a href="setting.html">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Setting</h3>
+                </a>
+                <a href="login.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- END OF ASIDE -->
+        <main>
+            <h1>Dashboard</h1>
+
+            <div class="date">
+                <input type="date" id="datePicker">
+            </div>
+
+            <div class="insights">
+                <div class="Water">
+                    <span id="water" class="material-symbols-outlined">water_drop</span>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3> Water Intake</h3>
+                            <h1> <span id="result-water"></span> Liters</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="36" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>91%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF WATER INTAKE -->
+                <div class="Sleep">
+                    <span id="sleep" class="material-symbols-outlined">bedtime</span>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3> Sleep Time</h3>
+                            <h1> <span id="result-sleep"></span> Hours</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="36" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>69%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF SLEEP TIMER -->
+                <div class="Blood">
+                    <span id="blood"  class="material-symbols-outlined">blood_pressure</span>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3> Blood Pressure</h3>
+                            <h1> <span id="result-blood"></span> mm Hg</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="36" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>54%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF Blood Pressure -->
+                <div class="Sugar">
+                    <span id="sugar" class="material-symbols-outlined"> glucose</span>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>Blood Suger Level</h3>
+                            <h1> <span id="result-sugar"></span> mg / dL</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="36" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>77%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF Sugar Level -->
+                <div class="Steps">
+                    <span id="steps" class="material-symbols-outlined">footprint</span>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>Total Steps Count</h3>
+                            <h1> <span id="result-steps"></span> Steps</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="36" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>51%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF Step Counter -->
+                <div class="Calories">
+                    <span id="calories" class="material-symbols-outlined">lunch_dining</span>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3> Calories</h3>
+                            <h1> <span id="result-calories"></span>  Calories</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="36" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>77%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-- END OF Calories -->
+            </div>
+            <!-- END OF INSIGHTS -->
+            <div class="history">
+                <h2>History</h2>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Water Intake <br />(Liters)</th>
+                        <th>Sleep Duration <br />(Hours)</th>
+                        <th>Blood Pressure <br />(mm Hg)</th>
+                        <th>Sugar Level <br />(mg/dL)</th>
+                        <th>Steps <br /></th>
+                        <th>Calories <br /></th>
+                        <!-- <th>Edit</th>
+                        <th>Delete</th> -->
+                      </tr>
+                    </thead>
+                    <tbody id="output"></tbody>
+                  </table>
+                
+            </div>
+        </main>
+        <!-- ---------END OF MAIN---------- -->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-outlined active">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Sahil</b></p>
+                        <small class="text-muted">User</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="profile.jpg">
+                    </div>
+                </div>
+            </div>
+            <!---------------------END OF TOP----------------------->
+            <div class="recent-suggestions">
+                <h2>Recent Suggestions</h2>
+                <div class="suggestions">
+                    <div class="suggestion">
+                        <div class="profile-photo">
+                            <img src="profile.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Steps</b> You have completed your 7500 steps walk for today </p>
+                            <small class="text-muted">3 Hours ago</small>
+                        </div>
+                    </div>
+                    
+                    <div class="suggestion">
+                        <div class="profile-photo">
+                            <img src="profile.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Calorie</b> You haven't taken enough calories for today, 356 calories left to reach the goal</p>
+                            <small class="text-muted">Yesterday 5:40 PM</small>
+                        </div>
+                    </div>
+        
+                    <div class="suggestion">
+                        <div class="profile-photo">
+                            <img src="profile.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Sugar Level</b> You need to reduce your sugar Intake</p>
+                            <small class="text-muted">Yesterday 3:24 PM</small>
+                        </div>
+                    </div>
+
+                    <div class="suggestion">
+                        <div class="profile-photo">
+                            <img src="profile.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Calorie:</b> You have taken more calories than you need for the day, I suggest you to avoid eating and do some exercise</p>
+                            <small class="text-muted">04-02-2024 8:38 PM</small>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- ------END OF RECENT SUGGESTIONS------ -->
+            <div class="analytics">
+                <h2>Analytics</h2>
+                <div class="item water">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">water_drop</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Water Intake</h3>
+                            <small class="text-muted">Last Week</small>
+                        </div>
+                        <h5 class="success">+29%</h5>
+                        <h3>23 Liters</h3>
+                    </div>
+                </div>
+                
+                <div class="item sleep">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">bedtime</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Sleep Time</h3>
+                            <small class="text-muted">Last Week</small>
+                        </div>
+                        <h5 class="danger">-12%</h5>
+                        <h3>42 Hours</h3>
+                    </div>
+                </div>
+
+                <div class="item steps">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">footprint</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>Foot Steps</h3>
+                            <small class="text-muted">Last Week</small>
+                        </div>
+                        <h5 class="success">+28%</h5>
+                        <h3>58568</h3>
+                    </div>
+                </div>
+                
+                <div class="item add-product">
+                    <div>
+                        <span class="material-symbols-outlined">add</span>
+                        <h3>Add Analytics</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="dashboard.js"></script> -->
+    <script src="index.js"></script>
+    
+</body>
+</html>
